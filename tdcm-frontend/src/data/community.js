@@ -1,0 +1,13 @@
+// Mock Data — Community Posts
+export const communityPosts = [
+    { id: '1', author: 'Ananya Gupta', initials: 'AG', time: '2 hours ago', category: 'Marketing', content: 'Just ran our first Google Performance Max campaign using TDCM\'s framework. 340% ROAS in the first week! 🚀 The key was isolating asset groups by audience segment rather than by product. Happy to share the setup if anyone\'s interested.', likes: 24, comments: 8 },
+    { id: '2', author: 'Vikram Mehta', initials: 'VM', time: '5 hours ago', category: 'Hiring', content: 'Looking for advice on structuring technical interviews for remote engineering candidates. We\'ve been having a lot of no-shows and dropoffs. Any tips from the community?', likes: 12, comments: 15 },
+    { id: '3', author: 'Sarah Chen', initials: 'SC', time: '1 day ago', category: 'CRM', content: 'Migrated from Salesforce to HubSpot with TDCM\'s help last quarter. The transition was smoother than expected — zero data loss and our team actually prefers the new interface. AMA about the migration process.', likes: 45, comments: 22 },
+    { id: '4', author: 'Arjun Reddy', initials: 'AR', time: '1 day ago', category: 'Startup', content: 'Completed the 0-to-90 program last month. The structured approach to validating our business model saved us from making a costly pivot. Now we have 3 paying customers and a clear roadmap to Series A.', likes: 67, comments: 19 },
+    { id: '5', author: 'Meera Joshi', initials: 'MJ', time: '2 days ago', category: 'Marketing', content: 'Shared a detailed breakdown of our content strategy that grew organic traffic 250% in 6 months in the latest blog post. SEO is far from dead — you just need the right framework.', likes: 33, comments: 11 },
+    { id: '6', author: 'Raj Kapoor', initials: 'RK', time: '3 days ago', category: 'General', content: 'Great session at the TDCM community meetup in Mumbai last weekend! Met some incredible founders and marketers. Looking forward to the Bangalore chapter next month. 🎉', likes: 56, comments: 7 },
+    { id: '7', author: 'Priya Nair', initials: 'PN', time: '4 days ago', category: 'Hiring', content: 'We just hired our 10th employee using TDCM\'s recruitment service. From posting to offer acceptance, it took only 11 days. Their candidate quality is consistently excellent.', likes: 38, comments: 5 },
+    { id: '8', author: 'Deepak Sharma', initials: 'DS', time: '5 days ago', category: 'CRM', content: 'Pro tip: If you\'re implementing a CRM, start with your reporting requirements first, then work backwards to data fields. Most implementations fail because people think about inputs before outputs.', likes: 89, comments: 31 },
+];
+
+export const communityCategories = ['All', 'Marketing', 'Hiring', 'CRM', 'Startup', 'General'];

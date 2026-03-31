@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Assistant/Tool specific
+.claude/
+f40a3b04e54770cb13f6b006f0b18956/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

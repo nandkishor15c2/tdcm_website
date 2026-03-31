@@ -1,0 +1,189 @@
+/* ═══════════════════════════════════════════════════════════
+   TDCM — Responsive Breakpoints
+   ═══════════════════════════════════════════════════════════ */
+
+/* Tablet: 768px–1024px */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .section-padding {
+        padding: var(--space-3xl) 0;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feat-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .feat-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 5vw, 52px);
+    }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section-padding {
+        padding: var(--space-2xl) 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions .nav-sign {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .hero {
+        padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-2xl);
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .page-hero {
+        padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-xl);
+    }
+
+    .page-hero h1 {
+        font-size: var(--text-h2);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .stat-value {
+        font-size: 32px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feat-tabs {
+        flex-direction: column;
+    }
+
+    .cta-email-form {
+        flex-direction: column;
+    }
+
+    .mega-menu {
+        min-width: auto;
+        position: static;
+        transform: none;
+        border-radius: var(--radius-md);
+        margin-top: var(--space-sm);
+    }
+
+    .has-mega:hover .mega-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .billing-toggle {
+        flex-wrap: wrap;
+    }
+}
+
+/* Small mobile: < 480px */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats {
+        flex-wrap: wrap;
+    }
+}
