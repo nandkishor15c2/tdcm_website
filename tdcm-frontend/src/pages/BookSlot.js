@@ -122,7 +122,7 @@ export function BookSlotPage() {
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg" id="btn-confirm-booking" style="width:100%" disabled>
-                  Confirm Booking ${icon('arrowRight', 16)}
+                  Confirm Slot ${icon('arrowRight', 16)}
                 </button>
                 <p style="text-align:center;margin-top:var(--space-sm);font-size:var(--text-sm);color:var(--text-muted)">
                   Please select a time slot above to continue
@@ -139,7 +139,7 @@ export function BookSlotPage() {
             <div class="confirm-check">
               ${icon('check', 36)}
             </div>
-            <h2 style="font-size:var(--text-h2);margin-top:var(--space-lg);margin-bottom:var(--space-sm)">Booking Confirmed!</h2>
+            <h2 style="font-size:var(--text-h2);margin-top:var(--space-lg);margin-bottom:var(--space-sm)">Slot Confirmed!</h2>
             <p style="color:var(--text-muted);font-size:var(--text-body-lg);max-width:420px;margin:0 auto var(--space-xl)">Your session with the founder has been booked. A calendar invite and meeting link will be sent to your email.</p>
 
             <div class="confirm-details">
