@@ -21,28 +21,28 @@ export function HomePage() {
       <!-- Subtle Background Graphics -->
       <div class="hero-bg-graphics">
         <svg class="hero-graphic hero-graphic-1" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M100 20 L100 180 M20 100 L180 100" stroke="rgba(59, 145, 152, 0.12)" stroke-width="2"/>
-          <circle cx="100" cy="100" r="60" stroke="rgba(59, 145, 152, 0.1)" stroke-width="1" fill="none"/>
-          <circle cx="100" cy="100" r="90" stroke="rgba(59, 145, 152, 0.08)" stroke-width="1" fill="none"/>
+          <path d="M100 20 L100 180 M20 100 L180 100" stroke="rgba(59, 145, 152, 0.5)" stroke-width="2"/>
+          <circle cx="100" cy="100" r="60" stroke="rgba(59, 145, 152, 0.45)" stroke-width="1" fill="none"/>
+          <circle cx="100" cy="100" r="90" stroke="rgba(59, 145, 152, 0.4)" stroke-width="1" fill="none"/>
         </svg>
         <svg class="hero-graphic hero-graphic-2" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 180 Q60 140 100 120 T180 40" stroke="rgba(59, 145, 152, 0.15)" stroke-width="2" fill="none"/>
-          <circle cx="180" cy="40" r="8" fill="rgba(59, 145, 152, 0.2)"/>
-          <path d="M165 35 L180 40 L170 55" stroke="rgba(59, 145, 152, 0.18)" stroke-width="2" fill="none"/>
+          <path d="M20 180 Q60 140 100 120 T180 40" stroke="rgba(59, 145, 152, 0.6)" stroke-width="2" fill="none"/>
+          <circle cx="180" cy="40" r="8" fill="rgba(59, 145, 152, 0.65)"/>
+          <path d="M165 35 L180 40 L170 55" stroke="rgba(59, 145, 152, 0.6)" stroke-width="2" fill="none"/>
         </svg>
         <svg class="hero-graphic hero-graphic-3" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="100" width="20" height="30" fill="rgba(59, 145, 152, 0.12)"/>
-          <rect x="50" y="80" width="20" height="50" fill="rgba(59, 145, 152, 0.15)"/>
-          <rect x="80" y="60" width="20" height="70" fill="rgba(59, 145, 152, 0.18)"/>
-          <rect x="110" y="30" width="20" height="100" fill="rgba(59, 145, 152, 0.22)"/>
+          <rect x="20" y="100" width="20" height="30" fill="rgba(59, 145, 152, 0.5)"/>
+          <rect x="50" y="80" width="20" height="50" fill="rgba(59, 145, 152, 0.55)"/>
+          <rect x="80" y="60" width="20" height="70" fill="rgba(59, 145, 152, 0.6)"/>
+          <rect x="110" y="30" width="20" height="100" fill="rgba(59, 145, 152, 0.65)"/>
         </svg>
         <svg class="hero-graphic hero-graphic-4" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="50,10 90,90 10,90" stroke="rgba(59, 145, 152, 0.12)" stroke-width="1.5" fill="none"/>
-          <circle cx="50" cy="50" r="5" fill="rgba(59, 145, 152, 0.15)"/>
+          <polygon points="50,10 90,90 10,90" stroke="rgba(59, 145, 152, 0.5)" stroke-width="1.5" fill="none"/>
+          <circle cx="50" cy="50" r="5" fill="rgba(59, 145, 152, 0.55)"/>
         </svg>
         <svg class="hero-graphic hero-graphic-5" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 60 L30 40 L50 55 L70 25 L90 45 L110 20" stroke="rgba(59, 145, 152, 0.15)" stroke-width="2" fill="none"/>
-          <circle cx="110" cy="20" r="4" fill="rgba(168, 213, 186, 0.25)"/>
+          <path d="M10 60 L30 40 L50 55 L70 25 L90 45 L110 20" stroke="rgba(59, 145, 152, 0.6)" stroke-width="2" fill="none"/>
+          <circle cx="110" cy="20" r="4" fill="rgba(168, 213, 186, 0.7)"/>
         </svg>
       </div>
       <div class="container">
@@ -127,10 +127,10 @@ export function HomePage() {
         <!-- Section Header -->
         <div style="max-width: 600px; margin-bottom: var(--space-3xl);">
           <h2 class="section-headline animate-on-scroll" style="color: var(--primary-dark); margin-bottom: var(--space-lg); font-size: clamp(36px, 5vw, 52px); font-weight: 700; line-height: 1.2;">
-            Services: AI that gets your work done.
+            Consultancy Offered.
           </h2>
           <p class="section-subheadline animate-on-scroll" style="color: var(--text-body); font-size: 18px; line-height: 1.7;">
-            Built-in AI tools boost productivity, scale growth, and unlock insights.
+            Strategic consulting and implementation services designed to accelerate your business growth.
           </p>
         </div>
 
@@ -206,7 +206,7 @@ export function HomePage() {
 
                     <!-- Learn More Link -->
                     <div style="position: relative; z-index: 1;">
-                      <a href="#/services" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease;">
+                      <a href="#/consultancy" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease;">
                         <span>Learn more</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;">
                           <path d="M5 12h14M12 5l7 7-7 7"/>

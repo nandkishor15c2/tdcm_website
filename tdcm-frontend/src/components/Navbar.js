@@ -10,17 +10,13 @@ export function renderNavbar() {
     <div class="container">
       <div class="nav-inner">
         <a href="#/" class="nav-logo">
-          <svg viewBox="0 0 40 40" width="36" height="36">
-            <rect width="40" height="40" rx="8" fill="#1A4A4F"/>
-            <text x="50%" y="54%" text-anchor="middle" dominant-baseline="central" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="12" fill="#FFFFFF">TCM</text>
-          </svg>
+          <img src="/tdcm-logo.webp" alt="TDCM Logo" width="40" height="40" style="display: block; border-radius: 8px;">
           <span>TDCM COMPANY</span>
         </a>
 
         <!-- Navigation links removed -->
 
         <div class="nav-actions">
-          <a href="#/login" class="nav-sign">Sign In</a>
           <a href="#/book-slot" class="btn btn-primary btn-sm">Book a Slot</a>
           <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -41,8 +37,7 @@ export function renderNavbar() {
       <a href="#/pricing" class="nav-link">Pricing</a>
       <a href="#/about" class="nav-link">About</a>
       <a href="#/contact" class="nav-link">Contact</a>
-      <a href="#/login" class="btn btn-secondary" style="margin-top:16px">Sign In</a>
-      <a href="#/book-slot" class="btn btn-primary">Book a Slot</a>
+      <a href="#/book-slot" class="btn btn-primary" style="margin-top:16px">Book a Slot</a>
     </div>
   `;
 
