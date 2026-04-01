@@ -105,7 +105,7 @@ export function HomePage() {
         </div>
         
         <!-- Subtitle -->
-        <p class="wwa-subtitle animate-on-scroll">Consulting that covers hiring, marketing, automation, and growth — so you can focus on running your business.</p>
+        <p class="wwa-subtitle animate-on-scroll">Consulting that covers hiring, marketing, automation, and growth so you can focus on running your business.</p>
         
         <!-- CTA -->
         <a href="#/book-slot" class="btn btn-primary btn-lg wwa-cta animate-on-scroll">
@@ -140,49 +140,49 @@ export function HomePage() {
           <div class="swiper services-swiper" style="overflow: visible; padding: 40px 0;">
             <div class="swiper-wrapper">
               ${[
-                {
-                  title: 'Go-To-Market Strategy',
-                  icon: 'rocket',
-                  description: 'Launch with precision and capture market share from day one',
-                  gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
-                  color: '#FF6B35'
-                },
-                {
-                  title: 'Product Launch',
-                  icon: 'zap',
-                  description: 'End-to-end product launch execution with proven frameworks',
-                  gradient: 'linear-gradient(135deg, #A8D5BA 0%, #3B9198 100%)',
-                  color: '#3B9198'
-                },
-                {
-                  title: 'Business Expansion',
-                  icon: 'trendingUp',
-                  description: 'Strategic growth roadmaps for sustainable scaling',
-                  gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
-                  color: '#8B5CF6'
-                },
-                {
-                  title: '90 Day Growth Plan',
-                  icon: 'target',
-                  description: 'Fast-track your startup from concept to revenue',
-                  gradient: 'linear-gradient(135deg, #EC4899 0%, #BE185D 100%)',
-                  color: '#EC4899'
-                },
-                {
-                  title: 'Market Entry',
-                  icon: 'globe',
-                  description: 'Penetrate new markets with confidence and precision',
-                  gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-                  color: '#10B981'
-                },
-                {
-                  title: 'Revenue Strategy',
-                  icon: 'dollarSign',
-                  description: 'Build and optimize sustainable revenue streams',
-                  gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
-                  color: '#F59E0B'
-                }
-              ].map((service, i) => `
+      {
+        title: 'Go-To-Market Strategy',
+        icon: 'rocket',
+        description: 'Launch with precision and capture market share from day one',
+        gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+        color: '#FF6B35'
+      },
+      {
+        title: 'Product Launch',
+        icon: 'zap',
+        description: 'End-to-end product launch execution with proven frameworks',
+        gradient: 'linear-gradient(135deg, #A8D5BA 0%, #3B9198 100%)',
+        color: '#3B9198'
+      },
+      {
+        title: 'Business Expansion',
+        icon: 'trendingUp',
+        description: 'Strategic growth roadmaps for sustainable scaling',
+        gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
+        color: '#8B5CF6'
+      },
+      {
+        title: '90 Day Growth Plan',
+        icon: 'target',
+        description: 'Fast-track your startup from concept to revenue',
+        gradient: 'linear-gradient(135deg, #EC4899 0%, #BE185D 100%)',
+        color: '#EC4899'
+      },
+      {
+        title: 'Market Entry',
+        icon: 'globe',
+        description: 'Penetrate new markets with confidence and precision',
+        gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+        color: '#10B981'
+      },
+      {
+        title: 'Revenue Strategy',
+        icon: 'dollarSign',
+        description: 'Build and optimize sustainable revenue streams',
+        gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+        color: '#F59E0B'
+      }
+    ].map((service, i) => `
                 <div class="swiper-slide">
                   <div class="service-carousel-card" style="background: ${service.gradient}; border-radius: 24px; padding: 48px 40px; height: 450px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
 
@@ -382,13 +382,13 @@ export function initHomePage() {
         },
       },
       on: {
-        init: function() {
+        init: function () {
           // Add smooth transition on initialization
           this.slides.forEach(slide => {
             slide.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
           });
         },
-        slideChange: function() {
+        slideChange: function () {
           // Add entrance animation for new active slide
           const activeSlide = this.slides[this.activeIndex];
           if (activeSlide) {

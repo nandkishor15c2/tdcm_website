@@ -32,7 +32,7 @@ export function FounderPage() {
 
           <div class="founder-bio">
             <p>
-              Tarun Dadlani is the force behind TDCM — a business consulting and solutions company built to bring structure, speed, and scale to growing businesses.
+              Tarun Dadlani is the force behind TDCM a business consulting and solutions company built to bring structure, speed, and scale to growing businesses.
             </p>
             <p>
               With deep experience across sales, operations, and growth strategy, he has helped organizations unlock revenue, build scalable systems, and create high-performance teams.
