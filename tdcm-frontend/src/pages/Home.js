@@ -109,7 +109,7 @@ export function HomePage() {
         
         <!-- CTA -->
         <a href="#/book-slot" class="btn btn-primary btn-lg wwa-cta animate-on-scroll">
-          Book a Free Consultation
+          Book Consultation
           ${icon('arrowRight', 18)}
         </a>
       </div>
@@ -204,15 +204,6 @@ export function HomePage() {
                       <p style="color: rgba(255, 255, 255, 0.9); font-size: 17px; line-height: 1.6; margin: 0;">${service.description}</p>
                     </div>
 
-                    <!-- Learn More Link -->
-                    <div style="position: relative; z-index: 1;">
-                      <a href="#/consultancy" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease;">
-                        <span>Learn more</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;">
-                          <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                      </a>
-                    </div>
                   </div>
                 </div>
               `).join('')}
@@ -238,7 +229,7 @@ export function HomePage() {
         <!-- CTA Button -->
         <div style="text-align: center; margin-top: var(--space-3xl);">
           <a href="#/book-slot" class="btn btn-primary btn-lg animate-on-scroll" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 36px; font-size: 16px; box-shadow: 0 8px 32px rgba(168, 213, 186, 0.3); transition: all 0.3s ease;">
-            <span>Book a Free Consultation</span>
+            <span>Book Consultation</span>
             ${icon('arrowRight', 20)}
           </a>
         </div>

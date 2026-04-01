@@ -48,9 +48,7 @@
 }
 
 #navbar.scrolled .nav-logo span {
-    max-width: 0;
-    opacity: 0;
-    margin-left: -10px; /* Counteracts gap of 10px on nav-logo */
+    /* Auto-hide disabled */
 }
 
 .nav-links {
@@ -1794,6 +1792,24 @@
     margin-bottom: var(--space-xl);
     flex-wrap: wrap;
     gap: var(--space-md);
+}
+
+.booking-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.booking-section:last-child {
+    margin-bottom: 0;
+}
+
+.booking-section-header {
+    margin-bottom: var(--space-xl);
+}
+
+.booking-divider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-3xl) 0;
 }
 
 .booking-fee-badge {
