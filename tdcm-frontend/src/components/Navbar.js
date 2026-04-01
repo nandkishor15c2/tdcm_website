@@ -17,70 +17,7 @@ export function renderNavbar() {
           <span>TDCM COMPANY</span>
         </a>
 
-        <div class="nav-links">
-          <a href="#/" class="nav-link" data-path="/">Home</a>
-
-          <div class="has-mega">
-            <span class="nav-link nav-link-has-menu" data-path="/services">
-              Services ${icon('chevronDown', 14)}
-            </span>
-            <div class="mega-menu">
-              <a href="#/services/recruitment" class="mega-item">
-                <div class="mega-icon">${icon('users', 20)}</div>
-                <div><div class="mega-label">Recruitment</div><div class="mega-desc">Find top talent 3× faster</div></div>
-              </a>
-              <a href="#/services/marketing" class="mega-item">
-                <div class="mega-icon">${icon('trendingUp', 20)}</div>
-                <div><div class="mega-label">Marketing</div><div class="mega-desc">Growth-driven performance</div></div>
-              </a>
-              <a href="#/services/crm" class="mega-item">
-                <div class="mega-icon">${icon('layers', 20)}</div>
-                <div><div class="mega-label">Business Solutions</div><div class="mega-desc">CRM & ops at scale</div></div>
-              </a>
-              <a href="#/services" class="mega-item">
-                <div class="mega-icon">${icon('arrowRight', 20)}</div>
-                <div><div class="mega-label">View All Services</div><div class="mega-desc">Explore everything we offer</div></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="has-mega">
-            <span class="nav-link nav-link-has-menu" data-path="/consultancy">
-              Consultancy ${icon('chevronDown', 14)}
-            </span>
-            <div class="mega-menu">
-              <a href="#/consultancy/go-to-market" class="mega-item">
-                <div class="mega-icon">${icon('rocket', 20)}</div>
-                <div><div class="mega-label">Go-To-Market</div><div class="mega-desc">Launch strategy</div></div>
-              </a>
-              <a href="#/consultancy/product-launch" class="mega-item">
-                <div class="mega-icon">${icon('zap', 20)}</div>
-                <div><div class="mega-label">Product Launch</div><div class="mega-desc">Full-service launch</div></div>
-              </a>
-              <a href="#/consultancy/0-to-90-plan" class="mega-item">
-                <div class="mega-icon">${icon('target', 20)}</div>
-                <div><div class="mega-label">0 to 90 Plan</div><div class="mega-desc">From zero to revenue</div></div>
-              </a>
-              <a href="#/consultancy/0-to-90-training" class="mega-item">
-                <div class="mega-icon">${icon('award', 20)}</div>
-                <div><div class="mega-label">0 to 90 Training</div><div class="mega-desc">Founder training</div></div>
-              </a>
-              <a href="#/consultancy/quarterly-health-analysis" class="mega-item">
-                <div class="mega-icon">${icon('barChart', 20)}</div>
-                <div><div class="mega-label">Quarterly Health</div><div class="mega-desc">Business diagnostics</div></div>
-              </a>
-              <a href="#/consultancy" class="mega-item">
-                <div class="mega-icon">${icon('arrowRight', 20)}</div>
-                <div><div class="mega-label">All Programs</div><div class="mega-desc">View consultancy portfolio</div></div>
-              </a>
-            </div>
-          </div>
-
-          <a href="#/community" class="nav-link" data-path="/community">Community</a>
-          <a href="#/articles" class="nav-link" data-path="/articles">Articles</a>
-          <a href="#/pricing" class="nav-link" data-path="/pricing">Pricing</a>
-          <a href="#/about" class="nav-link" data-path="/about">About</a>
-        </div>
+        <!-- Navigation links removed -->
 
         <div class="nav-actions">
           <a href="#/login" class="nav-sign">Sign In</a>

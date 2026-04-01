@@ -7,6 +7,14 @@ import './styles/base.css';
 import './styles/components.css';
 import './styles/responsive.css';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './styles/swiper-custom.css';
+import './styles/step-cards.css';
+import './styles/services-offered.css';
+
 import { addRoute, initRouter, handleRoute } from './router.js';
 import { renderNavbar } from './components/Navbar.js';
 import { renderFooter } from './components/Footer.js';

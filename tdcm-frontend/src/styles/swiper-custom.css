@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════════════════════
+   Swiper Carousel Custom Styles
+   ═══════════════════════════════════════════════════════════ */
+
+/* Consultancy Carousel */
+.consultancy-swiper {
+  padding: 40px 60px;
+  overflow: visible;
+}
+
+.consultancy-swiper .swiper-slide {
+  width: 320px;
+  height: auto;
+}
+
+/* Navigation Buttons */
+.consultancy-swiper .swiper-button-prev,
+.consultancy-swiper .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  background: rgba(168, 213, 186, 0.15);
+  border: 1px solid rgba(168, 213, 186, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--accent);
+}
+
+.consultancy-swiper .swiper-button-prev:after,
+.consultancy-swiper .swiper-button-next:after {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.consultancy-swiper .swiper-button-prev:hover,
+.consultancy-swiper .swiper-button-next:hover {
+  background: rgba(168, 213, 186, 0.25);
+  border-color: rgba(168, 213, 186, 0.5);
+  transform: scale(1.05);
+}
+
+.consultancy-swiper .swiper-button-prev.swiper-button-disabled,
+.consultancy-swiper .swiper-button-next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Pagination Dots */
+.consultancy-swiper .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 32px;
+}
+
+.consultancy-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.consultancy-swiper .swiper-pagination-bullet-active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Card Hover Effects */
+.consultancy-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consultancy-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(168, 213, 186, 0.4) !important;
+  box-shadow: 0 8px 30px rgba(168, 213, 186, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consultancy-swiper {
+    padding: 20px 40px;
+  }
+
+  .consultancy-swiper .swiper-slide {
+    width: 280px;
+  }
+
+  .consultancy-swiper .swiper-button-prev,
+  .consultancy-swiper .swiper-button-next {
+    width: 36px;
+    height: 36px;
+  }
+
+  .consultancy-swiper .swiper-button-prev:after,
+  .consultancy-swiper .swiper-button-next:after {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultancy-swiper {
+    padding: 20px 10px;
+  }
+
+  .consultancy-swiper .swiper-slide {
+    width: 260px;
+  }
+
+  .consultancy-swiper .swiper-button-prev {
+    left: 0;
+  }
+
+  .consultancy-swiper .swiper-button-next {
+    right: 0;
+  }
+}

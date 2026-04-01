@@ -1,0 +1,308 @@
+/* ═══════════════════════════════════════════════════════════
+   Services We Offer Section - HubSpot Style Carousel
+   ═══════════════════════════════════════════════════════════ */
+
+.services-offered-section {
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Wrapper */
+.services-carousel-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Swiper Container */
+.services-swiper {
+  overflow: visible !important;
+  padding: 40px 0 80px 0 !important;
+}
+
+.services-swiper .swiper-wrapper {
+  align-items: stretch;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-swiper .swiper-slide {
+  height: auto;
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.services-swiper .swiper-slide-prev,
+.services-swiper .swiper-slide-next {
+  opacity: 0.8;
+  transform: scale(0.95);
+  z-index: 1;
+}
+
+/* Service Card */
+.service-carousel-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 48px 40px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-slide-active .service-carousel-card {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.service-carousel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container */
+.service-carousel-card > div:first-of-type > div {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-carousel-card:hover > div:first-of-type > div {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Learn More Link */
+.service-carousel-card a:hover svg {
+  transform: translateX(4px);
+}
+
+/* Navigation Buttons */
+.services-nav-prev,
+.services-nav-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.services-nav-prev {
+  left: -60px;
+}
+
+.services-nav-next {
+  right: -60px;
+}
+
+.services-nav-prev:hover,
+.services-nav-next:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: #F8F9FA;
+}
+
+.services-nav-prev.swiper-button-disabled,
+.services-nav-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Pagination Dots */
+.services-pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #CBD5E1;
+  opacity: 1;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.services-pagination .swiper-pagination-bullet-active {
+  width: 32px;
+  border-radius: 5px;
+  background: #3B9198;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .services-carousel-wrapper {
+    padding: 0 60px;
+  }
+
+  .services-nav-prev {
+    left: 0;
+  }
+
+  .services-nav-next {
+    right: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .services-carousel-wrapper {
+    padding: 0 20px;
+  }
+
+  .services-nav-prev,
+  .services-nav-next {
+    display: none;
+  }
+
+  .services-swiper .swiper-slide {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .service-carousel-card {
+    height: auto;
+    min-height: 400px;
+    padding: 40px 32px;
+  }
+
+  .service-carousel-card h3 {
+    font-size: 28px !important;
+  }
+
+  .service-carousel-card p {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-swiper {
+    padding: 20px 0 60px 0 !important;
+  }
+
+  .service-carousel-card {
+    padding: 32px 24px;
+    min-height: 350px;
+  }
+
+  .service-carousel-card h3 {
+    font-size: 24px !important;
+  }
+
+  .service-carousel-card p {
+    font-size: 15px !important;
+  }
+
+  .service-carousel-card > div:first-of-type > div {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .service-carousel-card > div:first-of-type > div svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Decorative Background Elements Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+.service-carousel-card > div:first-child,
+.service-carousel-card > div:nth-child(2) {
+  animation: float 6s ease-in-out infinite;
+}
+
+.service-carousel-card > div:nth-child(2) {
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+/* Swiper Pagination Custom Styling */
+.services-pagination.swiper-pagination {
+  position: relative;
+  bottom: 0;
+}
+
+.services-pagination .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+.services-pagination .swiper-pagination-bullet:hover {
+  background: #2D7981;
+  transform: scale(1.2);
+}
+
+/* CTA Button Enhancement */
+.services-offered-section .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(168, 213, 186, 0.4) !important;
+}
+
+/* Section Header Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-offered-section .animate-on-scroll {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* 3D Effect Enhancement */
+.services-swiper {
+  perspective: 1200px;
+}
+
+.service-carousel-card {
+  transform-style: preserve-3d;
+}
+
+/* Smooth icon transitions */
+.service-carousel-card svg {
+  transition: all 0.3s ease;
+}
+
+.service-carousel-card:hover svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0.5;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

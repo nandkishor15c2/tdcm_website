@@ -7,6 +7,12 @@ import { services } from '../data/services.js';
 import { articles } from '../data/articles.js';
 import { testimonials, companyStats, trustedCompanies } from '../data/pricing.js';
 import { communityPosts } from '../data/community.js';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function HomePage() {
   return `
@@ -115,37 +121,126 @@ export function HomePage() {
     <!-- About the Founder Section -->
     <div id="founder-placeholder"></div>
 
-    <!-- Products / Services Overview -->
-    <section class="section-padding" style="position:relative;overflow:hidden">
-      <!-- Background Graphics -->
-      <div class="section-bg-graphic section-bg-graphic-1">
-        <svg viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="80" stroke="rgba(59, 145, 152, 0.1)" stroke-width="1" fill="none"/>
-          <circle cx="100" cy="100" r="60" stroke="rgba(59, 145, 152, 0.12)" stroke-width="1" fill="none"/>
-          <circle cx="100" cy="100" r="40" stroke="rgba(59, 145, 152, 0.15)" stroke-width="1" fill="none"/>
-        </svg>
-      </div>
-      <div class="container">
-        <div class="section-eyebrow animate-on-scroll">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text">What We Do</span>
+    <!-- Services We Offer Section -->
+    <section class="services-offered-section section-padding" style="background: #FFFFFF; position: relative; overflow: hidden;">
+      <div class="container" style="position: relative; z-index: 1;">
+        <!-- Section Header -->
+        <div style="max-width: 600px; margin-bottom: var(--space-3xl);">
+          <h2 class="section-headline animate-on-scroll" style="color: var(--primary-dark); margin-bottom: var(--space-lg); font-size: clamp(36px, 5vw, 52px); font-weight: 700; line-height: 1.2;">
+            Services: AI that gets your work done.
+          </h2>
+          <p class="section-subheadline animate-on-scroll" style="color: var(--text-body); font-size: 18px; line-height: 1.7;">
+            Built-in AI tools boost productivity, scale growth, and unlock insights.
+          </p>
         </div>
-        <h2 class="section-headline animate-on-scroll">Everything You Need to Scale</h2>
-        <p class="section-subheadline animate-on-scroll" style="margin-bottom:var(--space-2xl)">Three core pillars of growth — hire the right people, reach the right audience, and run your operations like clockwork.</p>
-        <div class="products-grid">
-          ${services.map((s, i) => `
-            <a href="#/services/${s.slug}" class="product-card ${s.isFeatured ? 'featured' : ''} animate-on-scroll" style="animation-delay:${i * 100}ms">
-              <div class="pc-icon">${icon(s.icon, 24)}</div>
-              <h3 class="pc-title">${s.title}</h3>
-              <p class="pc-desc">${s.description}</p>
-              <div class="pc-features">
-                ${s.features.slice(0, 3).map(f => `
-                  <div class="pc-feature">${icon('check', 16)} ${f.title}</div>
-                `).join('')}
-              </div>
-              <span class="pc-cta">Learn more ${icon('arrowRight', 16)}</span>
-            </a>
-          `).join('')}
+
+        <!-- Services Carousel Container -->
+        <div class="services-carousel-wrapper" style="position: relative; margin-bottom: var(--space-2xl);">
+          <!-- Swiper Container -->
+          <div class="swiper services-swiper" style="overflow: visible; padding: 40px 0;">
+            <div class="swiper-wrapper">
+              ${[
+                {
+                  title: 'Go-To-Market Strategy',
+                  icon: 'rocket',
+                  description: 'Launch with precision and capture market share from day one',
+                  gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                  color: '#FF6B35'
+                },
+                {
+                  title: 'Product Launch',
+                  icon: 'zap',
+                  description: 'End-to-end product launch execution with proven frameworks',
+                  gradient: 'linear-gradient(135deg, #A8D5BA 0%, #3B9198 100%)',
+                  color: '#3B9198'
+                },
+                {
+                  title: 'Business Expansion',
+                  icon: 'trendingUp',
+                  description: 'Strategic growth roadmaps for sustainable scaling',
+                  gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)',
+                  color: '#8B5CF6'
+                },
+                {
+                  title: '90 Day Growth Plan',
+                  icon: 'target',
+                  description: 'Fast-track your startup from concept to revenue',
+                  gradient: 'linear-gradient(135deg, #EC4899 0%, #BE185D 100%)',
+                  color: '#EC4899'
+                },
+                {
+                  title: 'Market Entry',
+                  icon: 'globe',
+                  description: 'Penetrate new markets with confidence and precision',
+                  gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                  color: '#10B981'
+                },
+                {
+                  title: 'Revenue Strategy',
+                  icon: 'dollarSign',
+                  description: 'Build and optimize sustainable revenue streams',
+                  gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+                  color: '#F59E0B'
+                }
+              ].map((service, i) => `
+                <div class="swiper-slide">
+                  <div class="service-carousel-card" style="background: ${service.gradient}; border-radius: 24px; padding: 48px 40px; height: 450px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+
+                    <!-- Decorative Background Elements -->
+                    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(0, 0, 0, 0.05); border-radius: 50%; filter: blur(30px);"></div>
+
+                    <!-- Content -->
+                    <div style="position: relative; z-index: 1;">
+                      <!-- Icon -->
+                      <div style="width: 72px; height: 72px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                        ${icon(service.icon, 32)}
+                      </div>
+
+                      <!-- Title -->
+                      <h3 style="color: #FFFFFF; font-size: 32px; font-weight: 700; margin-bottom: 16px; line-height: 1.2;">${service.title}</h3>
+
+                      <!-- Description -->
+                      <p style="color: rgba(255, 255, 255, 0.9); font-size: 17px; line-height: 1.6; margin: 0;">${service.description}</p>
+                    </div>
+
+                    <!-- Learn More Link -->
+                    <div style="position: relative; z-index: 1;">
+                      <a href="#/services" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease;">
+                        <span>Learn more</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;">
+                          <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="services-nav-prev" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 48px; height: 48px; background: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A4A4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </div>
+          <div class="services-nav-next" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer; width: 48px; height: 48px; background: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A4A4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="services-pagination" style="text-align: center; margin-top: 40px;"></div>
+        </div>
+
+        <!-- CTA Button -->
+        <div style="text-align: center; margin-top: var(--space-3xl);">
+          <a href="#/book-slot" class="btn btn-primary btn-lg animate-on-scroll" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 36px; font-size: 16px; box-shadow: 0 8px 32px rgba(168, 213, 186, 0.3); transition: all 0.3s ease;">
+            <span>Book a Free Consultation</span>
+            ${icon('arrowRight', 20)}
+          </a>
         </div>
       </div>
     </section>
@@ -178,8 +273,8 @@ export function HomePage() {
       </div>
     </section>
 
-    <!-- Articles Teaser -->
-    <section class="section-padding light-section">
+    <!-- Articles Teaser (Hidden) -->
+    <!-- <section class="section-padding light-section" style="display: none;">
       <div class="container">
         <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--space-xl);flex-wrap:wrap;gap:16px">
           <div>
@@ -208,7 +303,7 @@ export function HomePage() {
           `).join('')}
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- CTA Banner -->
     <section class="cta-banner">
@@ -242,4 +337,66 @@ export function initHomePage() {
       rotatingText.style.animation = 'wwaRotate 0.4s ease-out';
     }, 2400);
   }
+
+  // Services Carousel - Swiper Initialization
+  const servicesSwiper = document.querySelector('.services-swiper');
+  if (servicesSwiper) {
+    new Swiper('.services-swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 800,
+      effect: 'slide',
+      navigation: {
+        nextEl: '.services-nav-next',
+        prevEl: '.services-nav-prev',
+      },
+      pagination: {
+        el: '.services-pagination',
+        clickable: true,
+        dynamicBullets: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1280: {
+          slidesPerView: 2.5,
+          spaceBetween: 40,
+        },
+      },
+      on: {
+        init: function() {
+          // Add smooth transition on initialization
+          this.slides.forEach(slide => {
+            slide.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+          });
+        },
+        slideChange: function() {
+          // Add entrance animation for new active slide
+          const activeSlide = this.slides[this.activeIndex];
+          if (activeSlide) {
+            activeSlide.style.animation = 'slideIn 0.6s ease-out';
+          }
+        }
+      }
+    });
+  }
+
 }
